@@ -24,7 +24,7 @@ module MilesPoints
           value = mp.find('span.mn_rebateValueWithCurrency').text
           merchant_id = mp.find('li a')['data-merchant-id']
           link = "https://rapidrewardsshopping.southwest.com/b____.htm#id=mn_overlay&merchantId=#{merchant_id}"
-          result << { merch_name: merch_name, value: value, link: link } #"https://marketplace.plenti.com/me____.htm?#{link}"
+          result << { merch_name: merch_name, value: value, link: link }
         end
       end
       Capybara.reset_sessions!

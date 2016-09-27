@@ -24,9 +24,9 @@ module MilesPoints
         merch_name = pm.find('span.merch-title').text
         value = pm.find('span.merch-rates').text
         link = pm.all('a')[0][:href]
-        voucher = pm.all('span.ico-voucher').size > 0
+        coupons = pm.all('span.ico-voucher').size > 0
         offer = pm.all('span.ico-offer').size > 0
-        result << { merch_name: merch_name, value: value, link: link, voucher: voucher, offer: offer }
+        result << { merch_name: merch_name, value: value, link: link, coupons: coupons, offer: offer }
       end
       Capybara.reset_sessions!
       result

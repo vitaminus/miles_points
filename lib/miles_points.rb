@@ -13,6 +13,8 @@ require "miles_points/mileage_plan"
 require "miles_points/sky_miles"
 require "miles_points/choise_privileges"
 require "miles_points/ba"
+require "miles_points/hilton_hhonors"
+require "miles_points/marriott"
 
 module MilesPoints
   # Your code goes here...
