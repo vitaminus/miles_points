@@ -16,6 +16,7 @@ require "miles_points/ba"
 require "miles_points/hilton_hhonors"
 require "miles_points/marriott"
 require "miles_points/chase"
+require "miles_points/jet_cash"
 
 module MilesPoints
   def self.take(klass)

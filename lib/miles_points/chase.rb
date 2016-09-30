@@ -14,11 +14,9 @@ module MilesPoints
     Capybara.default_max_wait_time = 15
 
     def scrape_data
-      t = Time.now
       result = []
       visit "http://www.cashbackmonitor.com/credit-card-points-comparison/1/"
       sleep 2
-      # save_and_open_page
       freedom = []
       ink = []
       sapphire = []
@@ -46,16 +44,13 @@ module MilesPoints
                 value: pm.all('td')[6].text,
                 link: pm.all('td')[6].find('a')[:href]
               }
-              # puts freedom
               result << { freedom: freedom, ink: ink, sapphire: sapphire }
             end
           end
         end
-        # puts c
         all('td.nb.b')[c.to_i].find('a').click if c < all('td.nb.b').size - 1
       end
       Capybara.reset_sessions!
-      puts Time.now - t
       result
     end
   end
